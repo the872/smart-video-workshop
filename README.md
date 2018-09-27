@@ -26,11 +26,13 @@ to install OpenVINO™ toolkit, build sample demos, build inference engine sampl
 #### c). Compile samples
 Compile in-built samples in OpenVINO™ toolkit 
 
+	sudo su
 	source /opt/intel/computer_vision_sdk/bin/setupvars.sh
 	cd /opt/intel/computer_vision_sdk/deployment_tools/inference_engine/samples/
-	sudo mkdir build && cd build
-	sudo cmake –DCMAKE_BUILD_TYPE=Release ..
-	sudo make  
+	mkdir build && cd build
+	cmake –DCMAKE_BUILD_TYPE=Release ..
+	make 
+	exit
 
 #### d). Download models using model downloader scripts in OpenVINO™ toolkit installed folder
    - Install python3 (version 3.5.2 or newer) 
@@ -42,7 +44,13 @@ Compile in-built samples in OpenVINO™ toolkit
   		
 	cd /opt/intel/computer_vision_sdk/deployment_tools/model_downloader
 	sudo python3 downloader.py
-		
+
+#### e). Install Intel® System Studio, VNC viewer and Setup on development machine
+
+Follow the [guide](./up2-vision-kit/setup_intel_system_studio.md) to install Intel® System Studio and VNC viewer on your development machine.
+	
+> :warning: This workshop content has been validated with OpenVINO™ toolkit version R3 (computer_vision_sdk_2018.3.343). 
+
 		
 ## Workshop Agenda
 * **Intel Smart Video/Computer Vision Tools Overview**
@@ -59,12 +67,23 @@ Compile in-built samples in OpenVINO™ toolkit
   - Lab - [HW Acceleration with Intel® Movidius™ Neural Compute Stick](./HW-Acceleration-with-Movidious-NCS/README.md) 
   
 * **FPGA Inference Accelerator**
-  - Slides - [HW Acceleration with Intel® Movidius™ Neural Compute Stick](./presentations/04-HW-Acceleration-with-FPGA.pdf)
+  - Slides - [HW Acceleration with Intel® FPGA](./presentations/04-HW-Acceleration-with-FPGA.pdf)
 
 * **Optimization Tools and Techniques** 
   - Slides - [Optimization Tools and Techniques](/presentations/04_05_Optimization_and_advanced_analytics.pdf)
-  - Lab - [Optimization Tools and Techniques](./optimization-tools-and-techniques/README.md)
+  - Lab 1 - [Optimization Tools and Techniques](./optimization-tools-and-techniques/README.md)
+  - Lab 2- [Intel® VTune™ Amplifier tutorial](./optimization-tools-and-techniques/README_VTune.md)
   
 * **Advanced Video Analytics**
   - Lab - [Multiple models usage example](./advanced-video-analytics/multiple_models.md)
   - Lab - [Tensor Flow example](./advanced-video-analytics/tensor_flow.md)
+  
+* **UP2 AI Vision Development kit as Edge**
+  - Setup - [Development machine and Internet Connection Sharing](./up2-vision-kit/dev_machine_setup.md)
+  - Lab - [Interact face detection on UP2 kit using Intel System Studio](./up2-vision-kit/interact-face-detection.md)
+  
+> #### Disclaimer
+
+> Intel and the Intel logo are trademarks of Intel Corporation or its subsidiaries in the U.S. and/or other countries. 
+ 
+> *Other names and brands may be claimed as the property of others
